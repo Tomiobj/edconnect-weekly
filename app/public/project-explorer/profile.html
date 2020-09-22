@@ -1,0 +1,138 @@
+<!DOCTYPE html5>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Project Explorer</title>
+    </head>
+    <body>
+
+
+        <nav>
+            <section id="left_side">
+                <a href="index.html" class="hyperlink" id="logo">Project Explorer</a>
+                <input type="text" id="search_bar" placeholder="Search Projects" >
+                <input type="submit" id="submit_btn" value="Search" class="hyperlink">
+                <a href="search.html" class="hyperlink">Projects</a>
+                <a href="createProject .html" class="hyperlink" >Submit</a>
+            </section>
+        
+            <section id="right_side" >
+                <a href="register.html" id="head2" class="hyperlink">Sign Up</a>
+                <a href="Login.html" id="head2" class="hyperlink">Login</a>
+            </section>
+            </nav>
+
+       <main>
+
+        <section class="details">
+           <p class="details_head_profile" id="main_text"> Ade Ade </p>
+           
+        
+           <p class="details_head_profile" id="sub_text">test@edconnect.ng </p>
+
+        </section>
+
+           <section id="profile_header">
+            <section class="profile_head">
+               <p class="profile_header_head">Program</p>
+               <p class="profile_header_sub">Computer Science</p>
+            </section>
+
+            <section class="profile_head">
+               <p class="profile_header_head">Matriculation Number </p>
+               <p class="profile_header_sub">00/0000</p>
+            </section>
+
+            <section class="profile_head">
+               <p class="profile_header_head">Graduation Year</p>
+               <p class="profile_header_sub">2019</p>
+
+            </section>
+
+        </section>
+        
+            <h4>Update Profile</h4>
+            <hr>
+            <form id="user_form">
+                <label>First Name: </label>
+               <input type="text" id="first_name" /> 
+    
+               <br> <br>
+    
+               <label>Last Name: </label>
+               <input type="text" id="last_name" /> 
+    
+               <br> <br>
+      
+                <label>Email Address: </label>
+               <input type="email" id="email" value = "mail@mail.com"/> 
+    
+               <br> <br>
+    
+               <label>Matric Number: </label>
+               <input type="text" id="matric_number" /> 
+    
+               <br> <br>
+    
+               <label>Program: </label>
+               <select id="courses" name ="courses">
+                   <option value = "computer_science"> Computer Science</option>
+                    <option value = "accounting"> Accounting</option>
+               </select>
+            
+               <br> <br>
+    
+    
+               <label>Year of Graduation: </label>
+               <select id="year_of_graduation" name =year_of_graduation">
+                  
+                   <option value = "2020"> 2020</option>
+                   <option value = "2019"> 2019</option>
+                   <option value = "2018"> 2018</option>
+               </select>
+               <br> <br>
+    
+    
+               <button type="button" class="blue_btn">Update Profile</button>
+            </form>
+
+
+            <h4>Change Password</h4>
+            
+          
+            <form class="password_section">
+
+            <section class="flex">
+                <label class="heading_part">Current Password: </label>
+            
+               <label class="heading_part">New Password: </label>
+               
+               <label class="heading_part">Confirm Password: </label>
+
+            </section>
+
+            <section class="flex">
+               <input type="password" class="fine_bar" class="pass_part" id="current_password" />
+               <input type="password" class="fine_bar" class="pass_part" id="new_password" />
+               <input type="password" class="fine_bar" class="pass_part" id="confirm_password" />
+            </section>
+    
+    
+               
+            </form>
+            <button type="button" class="blue_btn">Change Password</button>
+            
+
+    
+            <footer class="footer">
+                <section class="bar"></section>
+        
+                <section class="bar">
+                <p class="footer_data" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                <p class="footer_data"> &nbsp Edconnect</p>
+                </section>
+                </footer>
+       </main>
+    </body>
+</html>

@@ -2,10 +2,14 @@ body{
  //background-color: lightblue;
  font-family: Calibri;
 }
-
+nav{
+    background-color: lightblue;
+    padding-bottom: 0.002%;
+}
 main{
     margin: 15%;
     margin-top: 10%;
+    
 }
 
 #aboutheading{
@@ -21,6 +25,9 @@ main{
 }
 #start{
     margin-top: 0%;
+}
+a{
+    text-decoration : none;
 }
 #logoimg{
 }
