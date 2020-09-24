@@ -64,38 +64,41 @@
                 <section class="row">
                     <section class="col-sm mt-3">
                         <p>First Name: </p>
-                        <input type="text" id="first_name" class="form-control" placeholder="First name"/> 
+                        <input type="text" name="firstName" class="form-control" placeholder="First name"/> 
                     </section>
                     <section class="col-sm mt-3">
                         <p>Last Name: </p>
-                        <input type="text" class="form-control" id="last_name" placeholder="Last name" /> 
+                        <input type="text" class="form-control" name="lastName" placeholder="Last name" /> 
                     </section>
                 </section>
                 <section class="row">
                     <section class="col-sm mt-3">
                         <p>Email Address: </p>
-                        <input type="email" id="email" class="form-control" placeholder = "Your Email address"/> 
+                        <input type="email" name="email" class="form-control" placeholder = "Your Email address"/> 
                     </section>
                     <section class="col-sm mt-3">
                         <p>Program: </p>
-                        <select id="courses" class="form-control" name ="courses">
+                        <select id="courses" class="form-control" name ="program">
                             <option value="" disabled selected hidden>Choose..</option>
                             <option value = "computer_science"> Computer Science</option>
-                            <option value = "accounting"> Accounting</option>
+                            <option value = "computer_information_systems">Computer Information Systems</option>
+                            <option value = "computer_technolgy"> Computer Technology</option>
                          </select>
                     </section>
                 </section>
                 <section class="row">
                     <section class="col-sm mt-3">
                         <p class="d-flex">Matriculation Number: </p>
-                        <input type="text" class="form-control" id="matric_number" placeholder="e.g. 00/0000" /> 
+                        <input type="text" class="form-control" name="matricNumber" placeholder="e.g. 00/0000" /> 
                     </section>
                     <section class="col-sm mt-3">
                         <p>Graduation year: </p>
-                <select class="form-control" id="year_of_graduation" name =year_of_graduation">
+                <select class="form-control" id="year_of_graduation" name ="graduationYear">
                <option value = "2020"> 2020</option>
                <option value = "2019"> 2019</option>
                <option value = "2018"> 2018</option>
+               <option value = "2017"> 2016</option>
+               <option value = "2017"> 2016</option>
            </select>
                     </section>
                 </section>
@@ -116,15 +119,15 @@
             <section class="row">
                 <section class="col-sm mt-3">
                     <p>Current Password</p>
-                    <input type="text" id="first_name" class="form-control" placeholder="Current Password"/> 
+                    <input type="text" class="currentPassword" class="form-control" placeholder="Current Password"/> 
                 </section>
                 <section class="col-sm mt-3">
                     <p>New Password</p>
-                    <input type="text" class="form-control" id="last_name" placeholder="Your new Password" /> 
+                    <input type="password" class="form-control" class="newPassword" placeholder="Your new Password" /> 
                 </section>
                 <section class="col-sm mt-3">
                     <p>Confirm Password</p>
-                    <input type="text" class="form-control" id="last_name" placeholder="Confirm new password" /> 
+                    <input type="password" class="form-control" class="confirmPassword" placeholder="Confirm new password" /> 
                 </section>
             </section>
                
