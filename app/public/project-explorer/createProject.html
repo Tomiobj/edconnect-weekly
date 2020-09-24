@@ -3,66 +3,70 @@
 <html>
     <head>
         <title>Project Explorer</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
 
-            <nav>
-                <section id="left_side">
-                    <a href="index.html" class="hyperlink" id="logo">Project Explorer</a>
-                    <input type="text" id="search_bar" placeholder="Search Projects" >
-                    <input type="submit" id="submit_btn" value="Search" class="hyperlink">
-                    <a href="search.html" class="hyperlink">Projects</a>
-                    <a href="createProject.html" class="hyperlink">Submit</a>
-                </section>
-            
-                <section id="right_side" >
-                    <a href="register.html" id="head2" class="hyperlink">Sign Up</a>
-                    <a href="login.html" id="head2" class="hyperlink">Login</a>
-                </section>
-                </nav>
+        <nav class="navbar form-inline bg-primary row row-fluid " >
+            <section class="col" id="left_side">
+                <a href="index.html" class="navbar-brand hyperlink text-light" id="logo">Project Explorer</a>
+                <sectionid="prp">
+                <input type="text" class="form-control my-auto" placeholder="Search Projects" >
+                <button type="button" class ="btn btn-outline-light my-auto">Search</button>
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+            </section>
+        
+            <section class="col-2 d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="head2" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="head2" class="hyperlink text-light">Login</a>
+            </section>
+            </nav>
         
 
-       <main>
+            <main class="container mt-5 ">
            
            
            <br> 
 
-           <center>
-           <form id="submit_form">
-            <h3>Submit Project</h3>
-            <label>Project name </label>
-           <input type="text" class="fine_bar" id="project_title" /> 
-
-           <br> <br>
-
-           <label>Project Abstract: </label> <br>
-           <textarea name="project_abstract" id="abstract_box" class="fine_bar" > </textarea> 
-
-           <br> <br>
-
-            <label>Authors: </label>
-           <input type="text" id="author" class="fine_bar" /> 
-
-           <br> <br>
-
-           <label>Tag(s): </label>
-           <input type="text" id="tag" class="fine_bar" /> 
-
-           <br><br>
+           <form class="">
+            <h3>Submit Project</h3> <hr>
+            <section>
+                <p>Project Name </p>
+                <input type="text" id="project_name" class="form-control" placeholder="Enter project name"/> 
            
+           
+                <p class="mt-3">Project Abstract </p>
+                <textarea class="form-control"style="height: 10rem;"> </textarea>
+              
+
+             
+                    <p class="mt-3">Author(s) </p>
+                    <input type="text" id="author" class="form-control" placeholder="Enter author names (seperated by comma)"/> 
+             
+           
+               
+                    <p class="mt-3">Tag(s) </p>
+                    <input type="text" id="tags" class="form-control" placeholder="Use # project with different topics (e.g. #javascript, #mongodb)"/> 
+                
+
+            </section>
+                <button type="button" class="btn btn-primary mt-3">Continue</button>
             </form>
         
-            <button type="button" class="blue_btn" id="ifbtnstretch" id="left_btn">Submit</button>
-        </center>
-        <footer class="footer">
-            <section class="bar"></section>
-    
-            <section class="bar">
-            <p class="footer_data" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
-            <p class="footer_data"> &nbsp Edconnect</p>
-            </section>
-            </footer>
+            
+            <footer class="footer">
+
+                <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+                   <section class="row d-flex flex-row py-auto pr-4 ">
+                        <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                        <p class=""> &nbsp Edconnect</p>
+                   </section>
+        
+                  </nav>
+        
+                </footer>
        </main>
     </body>
 </html>

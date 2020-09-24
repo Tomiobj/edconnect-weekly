@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <title>Project Explorer</title>
     </head>
     <body>
@@ -13,97 +13,115 @@
        </header>
        -->  
 
-       <nav>
-    <section id="left_side">
-        <a href="index.html" class="hyperlink" id="logo">Project Explorer</a>
-        <input type="text" id="search_bar" placeholder="Search Projects" >
-        <input type="submit" id="submit_btn" value="Search" class="hyperlink">
-        <a href="search.html" class="hyperlink">Projects</a>
-        <a href="createProject.html" class="hyperlink" >Submit</a>
+       <nav class="navbar form-inline bg-primary row row-fluid " >
+    <section class="col" id="left_side">
+        <a href="index.html" class="navbar-brand hyperlink text-light" id="logo">Project Explorer</a>
+        <sectionid="prp">
+        <input type="text" class="form-control my-auto" placeholder="Search Projects" >
+        <button type="button" class ="btn btn-outline-light my-auto">Search</button>
+        <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+        <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+        <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
     </section>
 
-    <section id="right_side" >
-        <a href="register.html" id="head2" class="hyperlink">Sign Up</a>
-        <a href="login.html" id="head2" class="hyperlink">Login</a>
+    <section class="col-2 d-flex justify-content-end"id="right_side" >
+        <a href="register.html" id="head2" class="hyperlink text-light mr-2" >Sign Up</a>
+        <a href="login.html" id="head2" class="hyperlink text-light">Login</a>
     </section>
     </nav>
 
-       <main>
-           <section class="main_bars" id="main_bars_1">
-           <p id="main_head">Welcome to Project Explorer</p>
-           <p id = "explanation">Project explorer is a repository for final year projects across all departments at
-               your instituion. You can upload,search projects and learn from others. </p>
-            
-               <button type="button" class="blue_btn">Get Started  </button>
-               <button type="button" id=login_btn>Login  </button>
+       <main class="container mt-3">
+           <section class="d-flex row col-lg jumbotron jumbotron-fluid mx-auto">
+               <section class="container">
+           <p class="display-4 ">Welcome to Project Explorer</p>
+           <p class="my-4">Project explorer is a repository for final year projects across all departments at
+               your institution. You can upload,search projects and learn from others. </p>
+   
+               <button type="button" class="btn btn-primary mr-2">Get Started  </button>
+               <button type="button" class="btn btn-secondary">Login  </button>
+
 
             </section>
-
-            <section class="main_bars" id="main_bars_2">
+        </section>
+            <section class="row justify-content-between">
             
-            <section class="card">
-
-            <p class="Heading">
+            <section class="card mb-2" style="width: 16rem;">
+            <section class="card-body">
+            <h5 class="card-title text-primary">
                 Project 1
-            </p>
-            <p class="subtext">
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
                 James Li, Ade Brian
-            </p>
-            <p class="description">
+            </h6>
+            <p class="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
             </p>
-            <p class="tags">
-                #javascript,  &nbsp &nbsp  #mongodb
-            </p>
+          
+            <a href="#" class="card-link">#Javascript</a>
+            <a href="#" class="card-link">#Mongodb</a>
         </section>
+            </section>
+        
 
-        <section class="card">
 
-            <p class="Heading">
-                Project 2
-            </p>
-            <p class="subtext">
-                Fried Lim, Tola Daniel
-            </p>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
-            </p>
-            <p class="tags">
-                #ejs,  &nbsp &nbsp  #ci
-            </p>
-        </section>
 
-        <section class="card">
+            <section class="card mb-2" style="width: 16rem;">
+                <section class="card-body">
+                <h5 class="card-title text-primary">
+                    Project 2
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    Fried Lim, Tola Daniel
+                </h6>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
+                </p>
+              
+                <a href="#" class="card-link">#ejs</a>
+                <a href="#" class="card-link">#ci</a>
+            </section>
+                </section>
 
-            <p class="Heading">
-                Project 3
-            </p>
-            <p class="subtext">
-                Ben Rice, Ade Sola
-            </p>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
-            </p>
-            <p class="tags">
-                #css,  &nbsp &nbsp  #html
-            </p>
-        </section>
 
-        <section class="card">
 
-            <p class="Heading">
-                Project 4
-            </p>
-            <p class="subtext">
-                Henry James, Bola Ade
-            </p>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
-            </p>
-            <p class="tags">
-                #yaml,  &nbsp &nbsp  #ejs
-            </p>
-        </section>
+                
+            <section class="card mb-2" style="width: 16rem;">
+                <section class="card-body">
+                <h5 class="card-title text-primary">
+                    Project 3
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    Ben Rice, Ade Sola
+                </h6>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
+                </p>
+              
+                <a href="#" class="card-link">#css</a>
+                <a href="#" class="card-link">#html</a>
+            </section>
+                </section>
+
+
+
+                <section class="card mb-2" style="width: 16rem;">
+                    <section class="card-body">
+                    <h5 class="card-title text-primary">
+                        Project 4
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        Henry James, Bola Ade
+                    </h6>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.
+                    </p>
+                
+                    <a href="#" class="card-link">#yaml</a>
+                    <a href="#" class="card-link">#ejs</a>
+                </section>
+                    </section>
+                
+
 
         
 
@@ -112,12 +130,15 @@
         
        </main>
        <footer class="footer">
-        <section class="bar"></section>
 
-        <section class="bar">
-        <p class="footer_data" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
-        <p class="footer_data"> &nbsp Edconnect</p>
-        </section>
+        <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+           <section class="row d-flex flex-row py-auto pr-4 ">
+                <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                <p class=""> &nbsp Edconnect</p>
+           </section>
+
+          </nav>
+
         </footer>
     </body>
 </html>

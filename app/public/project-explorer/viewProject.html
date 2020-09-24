@@ -2,123 +2,106 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <title>Project Explorer</title>
     </head>
     <body>
 
+        <nav class="navbar form-inline bg-primary row row-fluid " >
+            <section class="col" id="left_side">
+                <a href="index.html" class="navbar-brand hyperlink text-light" id="logo">Project Explorer</a>
+                <sectionid="prp">
+                <input type="text" class="form-control my-auto" placeholder="Search Projects" >
+                <button type="button" class ="btn btn-outline-light my-auto">Search</button>
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+            </section>
+        
+            <section class="col-2 d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="head2" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="head2" class="hyperlink text-light">Login</a>
+            </section>
+            </nav>
 
-       <nav>
-        <section id="left_side">
-            <a href="index.html" class="hyperlink" id="logo">Project Explorer</a>
-            <input type="text" id="search_bar" placeholder="Search Projects" >
-            <input type="submit" id="submit_btn" value="Search" class="hyperlink">
-            <a href="search.html" class="hyperlink">Projects</a>
-            <a href="createProject.html" class="hyperlink">Submit</a>
-        </section>
+    <main class="container mt-5 ">
+        <h3>Project 4</h3>
     
-        <section id="right_side" >
-            <a href="register.html" id="head2" class="hyperlink">Sign Up</a>
-            <a href="login.html" id="head2" class="hyperlink">Login</a>
-        </section>
-        </nav>
+        <section class="row bg-light p-3 justify-content-around mt-3">
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Created By</p>
+               <p class="profile_header_sub">Ade Ade</p>
+            </section>
 
-   <main>
-    <h3>Project 4</h3>
-    <section id="profile_header">
-        <section class="profile_head">
-           <p class="profile_header_head">Created By</p>
-           <p class="profile_header_sub">Ade Ade</p>
-        </section>
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Date Created</p>
+               <p class="profile_header_sub">2020-09-04</p>
+            </section>
 
-        <section class="profile_head">
-           <p class="profile_header_head">Date Created </p>
-           <p class="profile_header_sub">2020-09-04</p>
-        </section>
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Last Updated</p>
+               <p class="profile_header_sub">2020-08-04</p>
 
-        <section class="profile_head">
-           <p class="profile_header_head">Last Updated</p>
-           <p class="profile_header_sub">2020-08-04</p>
+            </section>
 
-        </section>
+            <section class="col-sm-fluid align-self-center">
+                <button type="button" class="btn btn-primary" >Edit Project</button>
+ 
+             </section>
 
-        <section class="profile_head" >
-            <button type="button" class="centreblue_btn" >Edit Project</button>
-
-         </section>
-
-    </section>
-    <section class="main_section">
-
-        <section class="half_side">
-    
-               <p>Project Abstract</p> <hr>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue metus eget nisi pretium, vitae malesuada metus luctus. Integer condimentum, orci at varius interdum, lectus risus ultricies tellus, in hendrerit ex enim id massa. Mauris varius arcu at turpis facilisis maximus. Nam eget dui et dui viverra sodales.</p>
-         
-       
-               <hr>
-       
-               
-                <p>Comments</p>
-                <textarea name="project_abstract" class="fine_bar_stretch"> </textarea> 
-                <br><br>
-                   <button type="button" class="blue_btn">Submit</button>
-       
-       
         </section>
 
-        <section class="half_side">
-            <p>Project Details</p>
-            <hr>
-            <section id="author_files">
-                <section id="author_files_head">
-                <p>Author(s)</p>
+
+
+        <section class="mt-5 row justify-content-between">
+           
+            <section class="col-sm mx-2 ">
+                <h5>Abstract</h5> <hr>
+                <section>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec purus gravida, ultricies lectus posuere, fermentum eros. Mauris feugiat enim.</p>
                 </section>
 
-                <section id="author_files_upload">
-                    <p class="author_name">Henry James</p>
+                <section>
+                    <h5 class="mt-3">Comment</h5>
+                <textarea class="form-control" placeholder="Leave a comment" style="height: 6rem;" > </textarea>
+                </section>
+
+                <section>
                     <hr>
-                    <p class="author_name">Bola Ade</p>
-                    <hr id="no_gap">
-                    <section id="grey_bckg">
-                    
-                    <p class="tags_name">
-                       
-                    <a href="">#javascript</a> , <a href="">#mongodb</a> </li>
-                    </p>
-                </section>
-                </section>
-            </section>   
-               
-
-            <section id="project_files">
-                <section id="project_files_head">
-                <p>Project files</p>
+                    <section class="row">
+                    <p class="mx-auto"> No comments added yet</p>
                 </section>
 
-                <section id="project_files_upload">
+
                 </section>
 
             </section>
-           
-
+            <section  class="col-sm-6 mx-2">
+                <h5>Manage Project files</h5> <hr>
+                <section>
+                    <section class="card d-flex" style="width:100%">
+                        <h6 class="card-header">Author(s) </h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Henry James</li>
+                            <li class="list-group-item">Bola Ade</li>
+                            <li class="list-group-item bg-light text-primary">#javascript, #mongodb</li>
+                          </ul>
+                    </section>
+                </section>
+                <section class="mt-3" >
+                    <section class="card d-flex" style="width: 100%; height:13rem;">
+                        <h6 class="card-header">Project files</h6>
+                        <p class="card-text text-center mt-5">No file uploaded yet</p>
+                    </section>
+                </section>
+               
+            </section>
         </section>
 
-     </section>
 
 
 
 
-
-
-     <footer class="footer">
-        <section class="bar"></section>
-
-        <section class="bar">
-        <p class="footer_data" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
-        <p class="footer_data"> &nbsp Edconnect</p>
-        </section>
-        </footer>
        </main>
     </body>
 </html>

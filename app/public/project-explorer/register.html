@@ -2,80 +2,82 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <title>Project Explorer</title>
     </head>
     <body>
 
 
-       <nav>
-        <section id="left_side">
-            <a href="index.html" class="hyperlink" id="logo">Project Explorer</a>
-            <input type="text" id="search_bar" placeholder="Search Projects" >
-            <input type="submit" id="submit_btn" value="Search" class="hyperlink">
-            <a href="search.html" class="hyperlink">Projects</a>
-            <a href="createProject.html" class="hyperlink" >Submit</a>
-        </section>
-    
-        <section id="right_side" >
-            <a href="register.html" id="head2" class="hyperlink">Sign Up</a>
-            <a href="login.html" id="head2" class="hyperlink">Login</a>
-        </section>
-        </nav>
+
+        <nav class="navbar form-inline bg-primary row row-fluid " >
+            <section class="col" id="left_side">
+                <a href="index.html" class="navbar-brand hyperlink text-light" id="logo">Project Explorer</a>
+                <sectionid="prp">
+                <input type="text" class="form-control my-auto" placeholder="Search Projects" >
+                <button type="button" class ="btn btn-outline-light my-auto">Search</button>
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+            </section>
+        
+            <section class="col-2 d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="head2" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="head2" class="hyperlink text-light">Login</a>
+            </section>
+            </nav>
 
 
-       <main>
-        <p id="main_head">Sign up</p>
+       <main class="container mt-5 ">
+       
 
         <section class="main_section">
-        <form id="user_form">
-            <label>First Name: </label>
-           <input type="text" id="first_name" placeholder="First name"/> 
-
-           <br> <br>
-
-           <label>Last Name: </label>
-           <input type="text" id="last_name" placeholder="Last name" /> 
-
-           <br> <br>
-  
-            <label>Email Address: </label>
-           <input type="email" id="email" placeholder = "Your Email address"/> 
-
-           <br> <br>
-
-           <label>Password: </label>
-           <input type="password" id="password" placeholder="Your Password" />
-
-           <br> <br>
-
-  
-
-           <label>Matriculation Number: </label>
-           <input type="text" id="matric_number" placeholder="e.g. 16/2020" /> 
-
-           <br> <br>
-
-           <label>Program: </label>
-           <select id="courses" name ="courses">
-            <option value="" disabled selected hidden>Choose..</option>
-               <option value = "computer_science"> Computer Science</option>
-                <option value = "accounting"> Accounting</option>
-           </select>
-        
-           <br> <br>
-
-
-           <label>Graduation year: </label>
-           <select id="year_of_graduation" name =year_of_graduation">
+            <form class="mt-5 ">
+            <h3>Sign up</h3>
+            <hr>
+            <section class="row mt-3">
+                <section class="col-sm mt-3">
+                    <p>First Name </p>
+                    <input type="text" id="first_name" class="form-control" placeholder="First name"/> 
+                </section>
+                <section class="col-sm mt-3">
+                    <p>Last Name</p>
+                    <input type="text" class="form-control" id="last_name" placeholder="Last name" /> 
+                </section>
+            </section>
+            <section class="row">
+                <section class="col-sm mt-3">
+                    <p>Email Address </p>
+                    <input type="email" id="email" class="form-control" placeholder = "Your Email address"/> 
+                </section>
+                <section class="col-sm mt-3">
+                <p>Password </p>
+                <input type="password" id="password" class="form-control" placeholder="Your Password" />
+                </section>
+            </section>
+            <section class="row align-items-end">
+                <section class="col-sm-6 mt-3">
+                    <p>Program </p>
+                    <select id="courses" class="form-control" name ="courses">
+                        <option value="" disabled selected hidden>Choose..</option>
+                        <option value = "computer_science"> Computer Science</option>
+                        <option value = "accounting"> Accounting</option>
+                     </select>
+                </section>
+                <section class="col-sm-3 mt-3">
+                    <p class="d-flex">Matriculation Number </p>
+                    <input type="text" class="form-control" id="matric_number" placeholder="e.g. 16/2020" /> 
+                </section>
+                    <section class="col-sm-3 mt-3">
+                    <p>Graduation year </p>
+                <select class="form-control" id="year_of_graduation" name =year_of_graduation">
                <option value = "2020"> 2020</option>
                <option value = "2019"> 2019</option>
                <option value = "2018"> 2018</option>
            </select>
-           <br> <br>
+                </section>
+            </section>
 
-
-           <button type="button" class="blue_btn">Sign up</button>
+           <button type="button" class="btn btn-primary mt-3">Sign up</button>
 
         </form>
 
@@ -83,13 +85,17 @@
 
 
     
-    <footer class="footer">
-        <section class="bar"></section>
 
-        <section class="bar">
-        <p class="footer_data" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
-        <p class="footer_data"> &nbsp Edconnect</p>
-        </section>
+    <footer class="footer">
+
+        <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+           <section class="row d-flex flex-row py-auto pr-4 ">
+                <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                <p class=""> &nbsp Edconnect</p>
+           </section>
+
+          </nav>
+
         </footer>
        </main>
     </body>
