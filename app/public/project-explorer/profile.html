@@ -8,20 +8,27 @@
     <body>
 
 
-        <nav class="navbar form-inline bg-primary row row-fluid " >
-            <section class="col" id="left_side">
-                <a href="index.html" class="navbar-brand hyperlink text-light" id="logo">Project Explorer</a>
-                <sectionid="prp">
-                <input type="text" class="form-control my-auto" placeholder="Search Projects" >
-                <button type="button" class ="btn btn-outline-light my-auto">Search</button>
+        <nav class="navbar bg-primary row p-1" >
+            <section class="col-fluid d-flex align-items-center justify-content-start" id="left_side">
+                <a href="index.html" class="navbar-brand text-light ml-4"  id="logo">Project Explorer</a>
+                <form class="form-inline">
+                <section class="container"> 
+                <section class="row-fluid mt-3"> 
+                <input type="search" class="form-control" placeholder="Search Projects" >
+                <button type="button" class =" btn btn-outline-light ">Search</button>
+                </section>
+            </section>
+                </form>
+                <section class="cold-flex align-items-center">
                 <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
                 <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
                 <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+                  </section>
             </section>
         
-            <section class="col-2 d-flex justify-content-end"id="right_side" >
+            <section class="col d-flex justify-content-end"id="right_side" >
                 <a href="register.html" id="head2" class="hyperlink text-light mr-2" >Sign Up</a>
-                <a href="login.html" id="head2" class="hyperlink text-light">Login</a>
+                <a href="login.html" id="head2" class="hyperlink text-light mr-4">Login</a>
             </section>
             </nav>
 
