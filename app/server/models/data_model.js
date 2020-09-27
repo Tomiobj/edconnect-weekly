@@ -8,7 +8,10 @@ class DataModel {
     }
 
     getById(id) {
-
+        if(this.data.length>=id) return false;
+        else return data[id];
+        //idk sha ill add || data.length =" " as per empty string if thst counts
+        //as not found (in all)
     }
 
     save(obj) {
@@ -20,11 +23,17 @@ class DataModel {
     }
 
     update(obj, id) {
-
+        if(this.data.length>=id) return false;
+        else {
+            data[id]=obj;
+        }
     }
 
     delete(id) {
-
+        if(this.data.length>=id) return false;
+        else {
+            delete data[id];
+        }
     }
 
     // this method will be overriden in the sub classes
