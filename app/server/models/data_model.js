@@ -19,13 +19,14 @@ class DataModel {
             this.data.push(obj);
             return true;
         }
-        return false;
+        return null;
     }
 
     update(obj, id) {
         if(this.data.length>=id) return false;
         else {
             data[id]=obj;
+            return true;
         }
     }
 
@@ -33,6 +34,7 @@ class DataModel {
         if(this.data.length>=id) return false;
         else {
             delete data[id];
+            return true;
         }
     }
 

@@ -15,6 +15,7 @@ class Projects extends DataModel {
     validate(obj) {
         if(Array.isArray(authors) && authors.length && Array.isArray(tags) && tags.length ) return true;
         else return false;
+        
     }
 }
 
