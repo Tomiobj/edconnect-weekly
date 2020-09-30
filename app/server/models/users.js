@@ -24,7 +24,8 @@ class Users extends DataModel {
     }
 
     getByEmail(email) {
-        if(this.email.find(element => element == email)) return this.User;
+        var person = this.data.find(element => element.email == email);
+        if (person === undefined) return person;
         else return null;
     }
 
