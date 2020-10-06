@@ -12,38 +12,39 @@
        </header>
 
        <nav>
-           <a href="index.html">Home</a>
-           <a href="">Projects</a>
-           <a href="login.html">Login</a>
-           <a href="register.html">Register</a>
-           <a href="profile.html">Profile</a>
-           <a href="search.html">Search</a>
+        <a href="index.html">Home</a>
+        <a href="search.html">Projects</a>
+        <a href="createProject.html">Submit</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="profile.html">Profile</a>
+        <a href="search.html">Search</a>
        </nav>
 
        <main>
-           <h4>Search Project By</h4>
            
            <br> 
 
            <form>
-            <label>Project Title: </label>
-           <input type="text" name="name" /> 
+            <label>Project Name: </label>
+           <input type="text" name="name" placeholder="Project 4" /> 
 
-           <br> <br>
-
-           <label>Project Abstract: </label> <br>
-           <textarea name="project_abstract"> </textarea> 
+          
 
            <br> <br>
 
            <form>
             <label>Authors: </label>
-           <input type="text" name="authors" /> 
+           <input type="text" name="authors" placeholder="Ade Ade, Brian James"/> 
 
            <br> <br>
 
            <label>Tag(s): </label>
-           <input type="text" id="tag" /> 
+           <input type="text" name="tags" placeholder="#yaml, #ejs" /> 
+           <br> <br>
+
+           <label>Project Abstract: </label> <br>
+           <textarea name="abstract"> </textarea> 
 
            <button type="button">Submit</button>
             </form>
