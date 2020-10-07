@@ -8,7 +8,7 @@ class DataModel {
     }
 
     getById(id) {
-        if(this.data.length>=id) return false;
+        if(this.data.length>=id || !data[id]) return false;
         else return data[id];
         //idk sha ill add || data.length =" " as per empty string if thst counts
         //as not found (in all)
@@ -23,7 +23,7 @@ class DataModel {
     }
 
     update(obj, id) {
-        if(this.data.length>=id) return false;
+        if(this.data.length>=id || !data[id]) return false;
         else {
             data[id]=obj;
             return true;
@@ -31,7 +31,7 @@ class DataModel {
     }
 
     delete(id) {
-        if(this.data.length>=id) return false;
+        if(this.data.length>=id || !data[id]) return false;
         else {
             delete data[id];
             return true;
