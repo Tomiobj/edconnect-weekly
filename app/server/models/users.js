@@ -34,13 +34,50 @@ class Users extends DataModel {
         if (person === undefined) return null;
         else return person;
     }
-    validate(obj) {
-        if(this.data.find(element => element == email)) return false;
-        if(this.data.find(element => element == matricNumber)) return false;
-        if(this.data["password"].length<7)  return false;
+    validate(user) {
+            const keys = Object.keys(user);
+            for(let key of keys){ //validates all user keys
+                if (user[key] === null || user[key] == " ") return false;
+            }
 
-        return true;
+            //Load object array
+            
+            for(let i=0; i< this.data.length; i++){
+
+                console.log("matric")
+                console.log("'"+ this.data[i].matricNumber+"'"+" == "+ "'"+user.matricNumber  +"'"+" ??")
+                console.log(typeof(this.data[i].matricNumber), typeof(user.matricNumber)); //console.clear();
+                console.log(!(this.data[i].matricNumber === user.matricNumber));
+
+                console.log("--------------------");
+
+
+                console.log("mail")
+                console.log("'"+ this.data[i].email+"'"+" == "+ "'"+user.email  +"'"+" ??")
+                console.log(typeof(this.data[i].email), typeof(user.email)); //console.clear();
+                console.log(!(this.data[i].email === user.email));
+
+                console.log("--------------------");
+
+
+
+                /*if(this.data[i].email == user.email) return false;
+                console.log("the code chose to not hear word");
+                if(this.data[i].matricNumber == user.matricNumber) return false;*/
+
+                if(this.data[i].email == user.email || this.data[i].matricNumber == user.matricNumber){
+                    return false;
+                   break;
+                 
+                }
+
+
+            }
+            return true;
+
     }
+
+
 }
 
 // Do not worry about the below for now; It is included so that we can test your code

@@ -10,7 +10,7 @@ class DataModel {
     getById(id) {
         if(this.data.length>=id || !data[id]) return false;
         else return data[id];
-        //idk sha ill add || data.length =" " as per empty string if thst counts
+        //idk ill add || data.length =" " as per empty string if thst counts
         //as not found (in all)
     }
 
