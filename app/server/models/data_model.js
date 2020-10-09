@@ -8,10 +8,15 @@ class DataModel {
     }
 
     getById(id) {
-        if(this.data.length>=id || !data[id]) return false;
-        else return data[id];
-        //idk ill add || data.length =" " as per empty string if thst counts
-        //as not found (in all)
+
+        // finding a match for user id
+        var user_obj = this.data.find(usr => {
+            return(usr.id == id); 
+        })
+        
+        //returning object if found
+        if(user_obj) return user_obj;
+        else return null;
     }
 
     save(obj) {
@@ -19,13 +24,13 @@ class DataModel {
             this.data.push(obj);
             return true;
         }
-        return null;
+        return false;
     }
 
     update(obj, id) {
         if(this.data.length>=id || !data[id]) return false;
         else {
-            data[id]=obj;
+            data.id=obj;
             return true;
         }
     }
@@ -33,7 +38,7 @@ class DataModel {
     delete(id) {
         if(this.data.length>=id || !data[id]) return false;
         else {
-            delete data[id];
+            delete this.data.id;
             return true;
         }
     }

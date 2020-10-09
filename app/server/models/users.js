@@ -19,8 +19,11 @@ class User {
 
 class Users extends DataModel {
     authenticate(email, password) {
-        if (this.data.email === email && this.data.password === password) return true;
+        //comparing email and password argument with the ones stored in object
+        var user = this.data.find(usr => (usr.email == email) && (usr.password==password) )
+        if (user) return true;
         else return false;
+   
     }
 
     getByEmail(email) {
@@ -30,7 +33,7 @@ class Users extends DataModel {
     }
 
     getByMatricNumber(matricNumber) {
-        var person = this.data.find(element => element.email == matricNumber);
+        var person = this.data.find(element => element.matricNumber == matricNumber);
         if (person === undefined) return null;
         else return person;
     }
@@ -39,10 +42,34 @@ class Users extends DataModel {
             for(let key of keys){ //validates all user keys
                 if (user[key] === null || user[key] == " ") return false;
             }
-
+            if(user.password.length<7) return false;
             //Load object array
             
             for(let i=0; i< this.data.length; i++){
+                if(this.data[i].email == user.email || this.data[i].matricNumber == user.matricNumber){
+                    console.log("test");
+                    return false;
+                }
+
+
+            }
+            console.log("test2");
+            return true;
+
+    }
+
+
+}
+
+// Do not worry about the below for now; It is included so that we can test your code
+// We will cover module exports in later parts of this course
+module.exports = {
+    User,
+    Users
+};
+
+/*
+
 
                 console.log("matric")
                 console.log("'"+ this.data[i].matricNumber+"'"+" == "+ "'"+user.matricNumber  +"'"+" ??")
@@ -64,25 +91,3 @@ class Users extends DataModel {
                 /*if(this.data[i].email == user.email) return false;
                 console.log("the code chose to not hear word");
                 if(this.data[i].matricNumber == user.matricNumber) return false;*/
-
-                if(this.data[i].email == user.email || this.data[i].matricNumber == user.matricNumber){
-                    return false;
-                   break;
-                 
-                }
-
-
-            }
-            return true;
-
-    }
-
-
-}
-
-// Do not worry about the below for now; It is included so that we can test your code
-// We will cover module exports in later parts of this course
-module.exports = {
-    User,
-    Users
-};
