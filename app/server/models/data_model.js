@@ -28,19 +28,19 @@ class DataModel {
     }
 
     update(obj, id) {
-        if(this.data.length>=id || !data[id]) return false;
+        console.log("obj -" +obj);
+        console.log("id" +id);
+        var update = this.data.find(element => element.id == id);
+        if (update === undefined) return null;
         else {
-            data.id=obj;
-            return true;
+            console.log("line -" +update);
         }
     }
 
     delete(id) {
-        if(this.data.length>=id || !data[id]) return false;
-        else {
-            delete this.data.id;
-            return true;
-        }
+        var user = this.data.find(element => element.id == id);
+        if (user === undefined) return null;
+        else delete user;
     }
 
     // this method will be overriden in the sub classes
