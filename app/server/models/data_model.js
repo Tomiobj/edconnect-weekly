@@ -28,19 +28,33 @@ class DataModel {
     }
 
     update(obj, id) {
-        console.log("obj -" +obj);
-        console.log("id" +id);
+        //console.log("obj -" +obj);
+        //console.log("id" +id);
+        //finding the user object that owns the id
         var update = this.data.find(element => element.id == id);
-        if (update === undefined) return null;
+        //console.log("line -" +update);
+        //return null if none is found
+        if (update === undefined) return false;
+
+        //????
         else {
-            console.log("line -" +update);
+            for(let key of Object.keys(obj)){
+                //console.log();
+                update[key]= obj[key];  
+            }
+            return true;
         }
     }
 
     delete(id) {
-        var user = this.data.find(element => element.id == id);
-        if (user === undefined) return null;
-        else delete user;
+        if(this.data.find(user => user.id==id)){
+            this.data=this.data.filter(user => user.id != id);
+            return true;
+        }
+        else{
+            return false;
+            }
+
     }
 
     // this method will be overriden in the sub classes

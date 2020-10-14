@@ -13,7 +13,13 @@ class Project {
 
 class Projects extends DataModel {
     validate(obj) {
-        if(Array.isArray(obj.authors) && obj.authors.length>0 && Array.isArray(obj.tags) && obj.tags.length>0 ) return true;
+        if(Array.isArray(obj.authors) && obj.authors.length>0 && Array.isArray(obj.tags) && obj.tags.length>0 ){
+            const keys = Object.keys(obj);
+            for (let key of keys){
+                if(obj[key]===null || obj[key]=="") return false;
+            }
+         return true;
+        }
         else return false;
         
     }
