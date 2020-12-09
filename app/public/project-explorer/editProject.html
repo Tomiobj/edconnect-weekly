@@ -1,0 +1,125 @@
+<!DOCTYPE html5>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Project Explorer</title>
+
+    </head>
+    <body>
+        <nav class="navbar bg-primary row p-1" >
+            <section class="col-fluid d-flex align-items-center justify-content-start" id="left_side">
+                <a href="index.html" class="navbar-brand text-light ml-4"  id="logo">Project Explorer</a>
+                <form class="form-inline">
+                <section class="container"> 
+                <section class="row-fluid mt-3"> 
+                <input type="search" class="form-control" placeholder="Search Projects" >
+                <button type="button" class =" btn btn-outline-light ">Search</button>
+                </section>
+            </section>
+                </form>
+                <section class="cold-flex align-items-center">
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+                  </section>
+            </section>
+        
+            <section class="col d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="left_link" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="right_link" class="hyperlink text-light mr-4">Login</a>
+        
+                <a href="register.html" id="hi_link" class=" invisible hyperlink text-light mr-2" >Hi, </a>
+                <a href="login.html" id="logout" class="invisible hyperlink text-light mr-4">logout</a>
+        
+                        
+            </section>
+            </nav>
+
+    <main class="container mt-5">
+        <h3>Project 4</h3>
+    
+        <section class="row bg-light p-3 justify-content-around mt-3">
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Created By</p>
+               <p class="profile_header_sub">Ade Ade</p>
+            </section>
+
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Date Created</p>
+               <p class="profile_header_sub">2020-09-04</p>
+            </section>
+
+            <section class="col-sm-fluid">
+               <p class="profile_header_head text-secondary">Last Updated</p>
+               <p class="profile_header_sub">2020-08-04</p>
+
+            </section>
+
+            <section class="col-sm-fluid align-self-center">
+                <a href="viewProject.html" type="button" class="btn btn-primary" >View Project</a>
+ 
+             </section>
+
+        </section>
+<form>
+        <section class="mt-5 row justify-content-between">
+           
+            <section class="col-sm mx-2 ">
+                <h5>Edit Project</h5> <hr>
+                <section>
+                    <p>Project Name </p>
+                    <input name="name" type="text" id="project_name" class="form-control" placeholder="Enter project name"/>     
+                </section>
+
+                <section>
+                    <p class="mt-3">Project Abstract </p>
+                <textarea name="abstract" class="form-control"style="height: 10rem;"> </textarea>
+                </section>
+
+                <section>
+                    <p class="mt-3">Author(s) </p>
+                    <input type="text" name="authors" id="author" class="form-control" placeholder="Henry James, Bola Ade"/> 
+              </section>
+
+                <section> <p class="mt-3">Tag(s) </p>
+                    <input type="text" name="tags" class="form-control" placeholder="#javascript, #mongodb"/> 
+                 </section>
+                <section class="row">
+                    
+                </section>
+                <button type="button" class="btn btn-primary mt-3">Save</button>
+            </section>
+            <section  class="col-sm-6 mx-2">
+                <h5>Manage Project files</h5> <hr>
+                <section>
+                    <section class="input-group">
+                        <input type="text" id="" class="form-control" placeholder="Click to open file browser"/> 
+                        <section class="input-group-text">Browse</section>
+                    </section>
+                </section>
+                <div class="mt-3" >
+                    <div class="card d-flex"style="width: 100%; height:13rem;">
+                        <div class="card-header">Project files</div>
+                        <p class="card-text text-center mt-5">No file uploaded yet</p>
+                    </div>
+                </section>
+               
+            </div>
+        </section>
+    </form>
+        <footer class="footer">
+
+            <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+               <section class="row d-flex flex-row py-auto pr-4 ">
+                    <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                    <p class=""> &nbsp Edconnect</p>
+               </section>
+    
+              </nav>
+    
+            </footer>
+       </main>
+       <script src="js/app.js"></script>
+    </body>
+</html>

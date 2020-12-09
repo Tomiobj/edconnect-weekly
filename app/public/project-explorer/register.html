@@ -1,0 +1,115 @@
+<!DOCTYPE html5>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Project Explorer</title>
+    </head>
+    <body>
+
+
+
+        <nav class="navbar bg-primary row p-1" >
+            <section class="col-fluid d-flex align-items-center justify-content-start" id="left_side">
+                <a href="index.html" class="navbar-brand text-light ml-4"  id="logo">Project Explorer</a>
+                <form class="form-inline">
+                <section class="container"> 
+                <section class="row-fluid mt-3"> 
+                <input type="search" class="form-control" placeholder="Search Projects" >
+                <button type="button" class =" btn btn-outline-light ">Search</button>
+                </section>
+            </section>
+                </form>
+                <section class="cold-flex align-items-center">
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+                  </section>
+            </section>
+        
+            <section class="col d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="left_link" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="right_link" class="hyperlink text-light mr-4">Login</a>
+        
+                <a href="register.html" id="hi_link" class=" invisible hyperlink text-light mr-2" >Hi, </a>
+                <a href="login.html" id="logout" class="invisible hyperlink text-light mr-4">logout</a>
+        
+                        
+            </section>
+            </nav>
+
+
+       <main class="container mt-5 ">
+       
+
+        <section class="main_section">
+            
+            <form class="mt-5 " id="signupForm">
+            <h3>Sign up</h3>
+            <div id="error_block" class="invisible alert alert-danger"></div>
+            <hr>
+            <section class="row mt-3 ">
+                <section class="col-sm mt-3">
+                    <p>First Name </p>
+                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First name"/> 
+                </section>
+                <section class="col-sm mt-3">
+                    <p>Last Name</p>
+                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" /> 
+                </section>
+            </section>
+            <section class="row">
+                <section class="col-sm mt-3">
+                    <p>Email Address </p>
+                    <input type="email" id="email" name="email" class="form-control" placeholder = "Your Email address"/> 
+                </section>
+                <section class="col-sm mt-3">
+                <p>Password </p>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Your Password" />
+                </section>
+            </section>
+            <section class="row align-items-end">
+                <section class="col-sm-6 mt-3">
+                    <p>Program </p>
+                    <select class="form-control" id="program" name="program">
+                        <option value="" disabled selected hidden>Choose..</option>
+                     </select>
+                </section>
+                <section class="col-sm-3 mt-3">
+                    <p class="d-flex">Matriculation Number </p>
+                    <input type="text" class="form-control" id="matricNumber" name="matricNumber" placeholder="e.g. 16/2020" /> 
+                </section>
+                    <section class="col-sm-3 mt-3">
+                    <p>Graduation year </p>
+                <select class="form-control" id="graduationYear" name="graduationYear">
+                    <option value="" disabled selected hidden>Choose..</option>
+           </select>
+                </section>
+            </section>
+
+            
+            <!--<a href="login.html" type="button" class="btn btn-primary mt-3">Sign up  </a>-->
+          <input type="button" value="Sign Up" class="btn btn-primary mt-3" id="submit_btn"> 
+
+        </form>
+
+    </section>
+
+
+    
+
+    <footer class="footer">
+
+        <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+           <section class="row d-flex flex-row py-auto pr-4 ">
+                <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                <p class=""> &nbsp Edconnect</p>
+           </section>
+
+          </nav>
+
+        </footer>
+       </main>
+       <script src="js/app.js"></script>
+    </body>
+</html>

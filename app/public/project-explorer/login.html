@@ -1,0 +1,79 @@
+<!DOCTYPE html5>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Project Explorer</title>
+    </head>
+    <body>
+
+
+
+        <nav class="navbar bg-primary row p-1" >
+            <section class="col-fluid d-flex align-items-center justify-content-start" id="left_side">
+                <a href="index.html" class="navbar-brand text-light ml-4"  id="logo">Project Explorer</a>
+                <form class="form-inline">
+                <section class="container"> 
+                <section class="row-fluid mt-3"> 
+                <input type="search" class="form-control" placeholder="Search Projects" >
+                <button type="button" class =" btn btn-outline-light ">Search</button>
+                </section>
+            </section>
+                </form>
+                <section class="cold-flex align-items-center">
+                <!--<input type="submit" id="submit_btn" value="Search" class="hyperlink">-->
+                <a href="search.html" class="hyperlink text-light ml-2">Projects</a>
+                <a href="createProject.html" class="hyperlink text-light ml-2" >Submit</a>
+                  </section>
+            </section>
+        
+            <section class="col d-flex justify-content-end"id="right_side" >
+                <a href="register.html" id="left_link" class="hyperlink text-light mr-2" >Sign Up</a>
+                <a href="login.html" id="right_link" class="hyperlink text-light mr-4">Login</a>
+        
+                <a href="register.html" id="hi_link" class=" invisible hyperlink text-light mr-2" >Hi, </a>
+                <a href="login.html" id="logout" class="invisible hyperlink text-light mr-4">logout</a>
+        
+                        
+            </section>
+            </nav>
+
+       <main class="container mt-5 ">
+           <section class="main_section">
+            
+        <form class="user_form mx-5" id="loginForm">
+            <h3>Login</h3>
+            <div id="error_block" class="invisible alert alert-danger"></div>
+            <hr>
+
+            <section id="email_section">
+            <p class="mt-3">Email Address </p>
+           <input type="email" id="email"class="form-control" placeholder = "Enter email"/> 
+
+        </section>
+
+           <section id="password_section">
+           <p class="mt-3">Password </p>
+           <input type="password" id="password" class="form-control " placeholder = "Password"/>
+        </section>
+
+           <button type="button" class="btn btn-primary mt-3" id="loginBtn" >Login</button>
+        </form>
+
+    </section>
+
+    <footer class="footer">
+
+        <nav class="d-flex flex-row-reverse bg-light py-2 mt-5" >
+           <section class="row d-flex flex-row py-auto pr-4 ">
+                <p class="text-muted" id="bland_text"> Project Explorer © 2020&nbsp ·&nbsp </p>
+                <p class=""> &nbsp Edconnect</p>
+           </section>
+
+          </nav>
+
+        </footer>
+       </main>
+       <script src="js/app.js"></script>
+    </body>
+</html>
