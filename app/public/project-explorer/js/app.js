@@ -7,6 +7,9 @@ function get_cookie (name){
     }
 }
 const init = () => {
+
+
+    
 //navbar
 {
 console.log("http://localhost:4000/api/users/uqdecg701wb");
@@ -293,9 +296,12 @@ const initIndex = () => {
 
             let taglink = document.createElement('a');
             taglink.classList.add("card-link");
-            let authors = jsonData[i].authors
+            let authors = document.createTextNode("#" + jsonData[i].tags);
+            taglink.appendChild(authors);
             taglink.title = authors;
-            taglink.href = "#";
+            console.log(authors);
+            taglink.href = authors;
+
             //taglink.appendChild(authors);
             console.log("round 6");
             inner_section.appendChild(taglink);
