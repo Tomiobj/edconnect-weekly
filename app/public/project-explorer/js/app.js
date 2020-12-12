@@ -391,7 +391,7 @@ const initviewProject = () => {
           
           let author_list = document.getElementById("project_authors");
           author_list.setAttribute("name","project_authors");
-        for (let i=0; i<=jsonData.length; i=i+1){
+        for (let i=0; i<jsonData.length; i=i+1){
             
             let option = document.createElement('option');
             option.value = jsonData[0].authors[i];
