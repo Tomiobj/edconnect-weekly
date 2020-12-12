@@ -33,7 +33,7 @@ console.log("http://localhost:4000/api/users/uqdecg701wb");
             let right_link = document.getElementById("right_link");
             right_link.classList.add("invisible");
 
-            let hi_link = document.getElementById("hi_link");
+            let hi_link = document.getElementById("username");
             hi_link.classList.remove("invisible");
             hi_link.innerHTML="Hi, " +data.firstname;
 
