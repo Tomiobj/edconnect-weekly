@@ -386,10 +386,11 @@ const initviewProject = () => {
         let jsonData = data;//JSON.stringify(data);
         console.log(jsonData);
         //console.log(jsonData[0].name);
-        document.getElementById("projectName").innerHTML = jsonData[0].name; //name
-        document.getElementById("projectAbstract").innerHTML = jsonData[0].abstract; //abstract
+        document.getElementById("project_name").innerHTML = jsonData[0].name; //name
+        document.getElementById("project_abstract").innerHTML = jsonData[0].abstract; //abstract
           
-          let author_list = document.getElementById("author_list");
+          let author_list = document.getElementById("project_authors");
+          author_list.setAttribute("name","project_authors");
         for (let i=0; i<=jsonData.length; i=i+1){
             
             let option = document.createElement('option');
@@ -401,6 +402,7 @@ const initviewProject = () => {
             author_list.appendChild(option);
         }
         let Tags = document.createElement('option');
+        Tags.setAttribute("name","project_tags");
         Tags.textContent = jsonData[0].tags; //tags
         Tags.textContent = "#" + Tags.textContent.split(" ").join(" #")
         Tags.classList.add("list-group-item");
@@ -408,7 +410,7 @@ const initviewProject = () => {
         Tags.classList.add("text-primary");
         author_list.appendChild(Tags);
 
-        const createdBy = document.getElementById("projectName");
+        const createdBy = document.getElementById("project_name");
         const createdBy_ID = jsonData[0].createdBy;
         fetch("api/users/" + id)
         .then(function(response){
