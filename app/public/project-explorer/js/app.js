@@ -401,6 +401,7 @@ const initviewProject = () => {
             option.classList.add("list-group-flush");
             author_list.appendChild(option);
         }
+        let tag_list = document.getElementById("project_tags");
         let Tags = document.createElement('option');
         Tags.setAttribute("name","project_tags");
         Tags.textContent = jsonData[0].tags; //tags
@@ -408,7 +409,9 @@ const initviewProject = () => {
         Tags.classList.add("list-group-item");
         Tags.classList.add("bg-light");
         Tags.classList.add("text-primary");
-        author_list.appendChild(Tags);
+        Tags.style.border = "0px thick solid #0000FF"
+        tag_list.appendChild(Tags);
+        author_list.appendChild(tag_list);
 
         const createdBy = document.getElementById("project_author");
         const createdBy_ID = jsonData[0].createdBy;
