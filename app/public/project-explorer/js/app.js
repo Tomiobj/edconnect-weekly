@@ -384,7 +384,7 @@ const initviewProject = () => {
     .then((data)=>{
         
         let jsonData = data;//JSON.stringify(data);
-        console.log(jsonData);
+        //console.log(jsonData);
         //console.log(jsonData[0].name);
         document.getElementById("project_name").innerHTML = jsonData[0].name; //name
         document.getElementById("project_abstract").innerHTML = jsonData[0].abstract; //abstract
@@ -410,16 +410,23 @@ const initviewProject = () => {
         Tags.classList.add("text-primary");
         author_list.appendChild(Tags);
 
-        const createdBy = document.getElementById("project_name");
+        const createdBy = document.getElementById("project_author");
         const createdBy_ID = jsonData[0].createdBy;
-        fetch("api/users/" + id)
+        const link = "/api/users/" + createdBy_ID ;
+        let created_link = link;
+        console.log(created_link);
+        fetch(created_link)
         .then(function(response){
-            return response.json;
+            return response.json();
         })
         .then((data)=>{
+            console.log("api/users link");
+            console.log(data);
             createdBy.innerHTML=data.firstname; //id doesnt exist
         })
-
+        .catch((err)=>{
+            console.log("Error: ", err.message);
+        })
         
     })
     .catch((err)=>{
