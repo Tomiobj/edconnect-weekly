@@ -49,7 +49,7 @@ console.log("http://localhost:4000/api/users/uqdecg701wb");
                         exp.setDate(exp.getDate() - 5);
                         document.cookie = `${key}=${value}; expires=${exp.toUTCString()}; path=/`;
                         console.log("logged out");
-
+/*
                         let left_link = document.getElementById("left_link");
                         left_link.classList.remove("invisible");
             
@@ -61,6 +61,7 @@ console.log("http://localhost:4000/api/users/uqdecg701wb");
             
                         let logout_link = document.getElementById("logout");
                         logout_link.classList.add("invisible");
+*/
                         window.location.replace("/project-explorer/index.html");
 
                    
@@ -278,6 +279,7 @@ const initIndex = () => {
             console.log("round 2");
             inner_section.appendChild(title);
             console.log(jsonData[i].name);
+            
             console.log("round 3");
 
             let subtitle = document.createElement('h6');
@@ -307,6 +309,16 @@ const initIndex = () => {
             inner_section.appendChild(taglink);
             console.log("round 7");
 
+
+            let project_id = jsonData[i].id;
+            inner_section.addEventListener("click", function signup(e){
+                e.preventDefault();
+                console.log("link"+project_id);
+                let link = "/project-explorer/viewProject.html?id="+project_id;
+                window.location.replace(link);
+
+                   
+                }) 
 
             i=i+1;
         }
@@ -375,27 +387,36 @@ const initviewProject = () => {
     // 
     console.log("View project page");
     const project_data = "/api/projects";
+    const p_ID = window.location.href.split('=')[1];
+    console.log(p_ID);
     let projects = project_data;
+    console.log(projects);
 
     fetch(projects)
     .then(function(response){
         return response.json();
     })
     .then((data)=>{
-        
+        /*
         let jsonData = data;//JSON.stringify(data);
+        console.log(jsonData);
+        */
+       for(let i=0; i<data.length; i++){
+           if(data[i].id == p_ID) jsonData=data[i];
+       }
+       console.log(jsonData);
         //console.log(jsonData);
         //console.log(jsonData[0].name);
-        document.getElementById("project_name").innerHTML = jsonData[0].name; //name
-        document.getElementById("project_abstract").innerHTML = jsonData[0].abstract; //abstract
+        document.getElementById("project_name").innerHTML = jsonData.name; //name
+        document.getElementById("project_abstract").innerHTML = jsonData.abstract; //abstract
           
           let author_list = document.getElementById("project_authors");
           author_list.setAttribute("name","project_authors");
         for (let i=0; i<jsonData.length; i=i+1){
             
             let option = document.createElement('option');
-            option.value = jsonData[0].authors[i];
-            option.textContent = jsonData[0].authors[i];
+            option.value = jsonData.authors[i];
+            option.textContent = jsonData.authors[i];
             option.classList.add("list-group");
             option.classList.add("list-group-item");
             option.classList.add("list-group-flush");
@@ -404,17 +425,16 @@ const initviewProject = () => {
         let tag_list = document.getElementById("project_tags");
         let Tags = document.createElement('option');
         Tags.setAttribute("name","project_tags");
-        Tags.textContent = jsonData[0].tags; //tags
+        Tags.textContent = jsonData.tags; //tags
         Tags.textContent = "#" + Tags.textContent.split(" ").join(" #")
         Tags.classList.add("list-group-item");
         Tags.classList.add("bg-light");
         Tags.classList.add("text-primary");
-        Tags.style.border = "0px thick solid #0000FF"
         tag_list.appendChild(Tags);
         author_list.appendChild(tag_list);
 
         const createdBy = document.getElementById("project_author");
-        const createdBy_ID = jsonData[0].createdBy;
+        const createdBy_ID = jsonData.createdBy;
         const link = "/api/users/" + createdBy_ID ;
         let created_link = link;
         console.log(created_link);
