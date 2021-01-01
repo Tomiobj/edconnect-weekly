@@ -412,8 +412,10 @@ const initviewProject = () => {
           
           let author_list = document.getElementById("project_authors");
           author_list.setAttribute("name","project_authors");
-        for (let i=0; i<jsonData.length; i=i+1){
+          console.log("xxx");
+        for (let i=0; i<jsonData.authors.length; i=i+1){
             
+            console.log("authors" +jsonData.authors);
             let option = document.createElement('option');
             option.value = jsonData.authors[i];
             option.textContent = jsonData.authors[i];
@@ -427,7 +429,7 @@ const initviewProject = () => {
         Tags.setAttribute("name","project_tags");
         Tags.textContent = jsonData.tags; //tags
         Tags.textContent = "#" + Tags.textContent.split(" ").join(" #")
-        Tags.classList.add("list-group-item");
+        //Tags.classList.add("list-group-item");
         Tags.classList.add("bg-light");
         Tags.classList.add("text-primary");
         tag_list.appendChild(Tags);
