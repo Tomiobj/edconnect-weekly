@@ -447,7 +447,7 @@ const initviewProject = () => {
         .then((data)=>{
             console.log("api/users link");
             console.log(data);
-            createdBy.innerHTML=data.firstname; //id doesnt exist
+            createdBy.innerHTML=data.firstname + " " + data.lastname; //id doesnt exist
         })
         .catch((err)=>{
             console.log("Error: ", err.message);
